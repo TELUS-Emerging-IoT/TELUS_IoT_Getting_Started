@@ -180,7 +180,7 @@ Now, everything is ready to compile the Azure client and get it loaded to the Io
 1. Check to see if there is a USB drive detected called NODE_L496ZG.  This means the board is connected.
 1. Run the command:
   * ```mbed compile -m NUCLEO_L496ZG -t GCC_ARM --profile toolchain_debug.json```
-    * * `python -m` may need to be prepended on Windows or use `sudo` on Mac*
+    * `python -m` may need to be prepended on Windows or use `sudo` on Mac*
 1. If all goes well,  the mbed compiler will start creating a new bin file. When it is complete, the file can be found here, relative to the `azure-iot-mbed-client` directory: `BUILD/NUCLEO_L496ZG/GCC_ARM/azure-iot-mbed-client.bin`
 1. Drag the created binary over to the NODE_L496ZG drive, this will load the new client software and reboot the IoT board
 
@@ -212,7 +212,7 @@ With the IoT board connected to the computer, you are able to analyze the board 
 
 #### Windows
 1. Download and install the [Quectel LTE USB Driver](files/Quectel_LTE_Windows_USB_Driver_V1.0.zip)
-2. Using a client of choice (I prefer [Putty](https://www.putty.org/)) open a Serial connection to the COM port the board is using (for Windows, COM port can be found using Device Manager), and a Baud Rate of 115200.
+2. Using a client of choice (For example, [Putty](https://www.putty.org/)) open a Serial connection to the COM port the board is using (for Windows, COM port can be found using Device Manager), and a Baud Rate of 115200.
 
 If nothing is shown in the terminal after following the above steps, press the black “RESET B2” button on the white board, this will reboot the board and should present a screen similar to this one in the terminal:
 
@@ -279,8 +279,6 @@ module.exports = function (context, IoTHubMessages) {
     context.done();
 };
 ```
-
-You can come up with your own version.
 
 
 ### Acknowledgements
